@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Interactive 4-day no-equipment calisthenics routine for travel weeks." />
+  <title>Away From Home Routine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav">
+      <a class="brand" href="#home"><span>✈️</span>Away From Home Routine</a>
+      <button id="menuBtn" class="menu" aria-label="Open menu">☰</button>
+      <div id="navLinks" class="links">
+        <a href="#home">Home</a>
+        <a href="#workouts">Workouts</a>
+        <button id="resetBtn" type="button">Reset week</button>
+      </div>
+    </nav>
+    <section class="hero-inner">
+      <div>
+        <p class="eyebrow">No equipment • 4 days • 35–50 min</p>
+        <h1>Stay strong while travelling.</h1>
+        <p class="lead">A simple bodyweight routine to keep your momentum before returning to the gym. Pick a workout, follow precise exercise illustrations, and check off each movement from your phone.</p>
+        <div class="actions"><a class="primary" href="#workouts">Start training</a><a class="secondary" href="#home">See schedule</a></div>
+      </div>
+      <aside class="score-card">
+        <div class="ring" id="ring"><span id="percent">0%</span></div>
+        <h2>Travel week</h2>
+        <p id="summary">No exercises checked yet.</p>
+      </aside>
+    </section>
+  </header>
+  <main>
+    <section id="homePage" class="page active">
+      <div class="section-title"><p class="eyebrow">Weekly plan</p><h2>Four focused sessions</h2><p>Use Monday, Tuesday, Thursday and Saturday as the default schedule. Keep Wednesday, Friday and Sunday for walking, mobility and recovery.</p></div>
+      <div id="weekGrid" class="week-grid"></div>
+    </section>
+    <section id="workoutsPage" class="page">
+      <div class="section-title"><p class="eyebrow">Training menu</p><h2>Select your session</h2><p>Each workout includes precise bodyweight exercise drawings, sets, reps, rest and technique cues.</p></div>
+      <div id="workoutGrid" class="workout-grid"></div>
+    </section>
+    <section id="sessionPage" class="page">
+      <button class="back" data-route="workouts" type="button">← Back to workouts</button>
+      <div id="session"></div>
+    </section>
+  </main>
+  <footer><p>Progress is saved locally on this device.</p><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
